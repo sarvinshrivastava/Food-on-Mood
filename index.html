@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
       <title>
             ar-demo
       </title>
       <meta name = "description" content = "ar-demo">
+      <!--Script 1-->
       <script src="https://aframe.io/releases/1.2.0/aframe.min.js%22%3E"></script>
+      <!--Script 2-->
       <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js%22%3E"></script>
 </head>
+
 <body>
-    <a-scene>
+    <a-scene embedded arjs>
         <a-assets>
-            <a-asset-item id="book-model" src="book.gltf"></a-asset-item>
-            <a-marker-camera preset="custom" type="pattern" url="pattern.patt"></a-marker-camera>
+            <a-asset-item id="book-model" src="Book.gltf"></a-asset-item>
+            <a-marker-camera preset="custom" type="pattern" url="pattern-Table.patt"></a-marker-camera>
         </a-assets>
+
         <a-entity gltf-model="#book-model"></a-entity>
     </a-scene>
 </body>
+
 </html>
