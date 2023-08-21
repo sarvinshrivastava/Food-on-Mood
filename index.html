@@ -15,14 +15,16 @@
 </head>
 
 <body>
-    <a-scene arjs="trackingMethod: best; markersAreaEnabled: true;">
-        <a-assets>
-            <a-asset-item id="book-model" src="Book.gltf"></a-asset-item>
-            <a-marker-camera preset="custom" type="pattern" url="pattern-Table.patt"></a-marker-camera>
-        </a-assets>
+      <a-scene arjs="trackingMethod: best;">
+            <a-marker type="pattern" url="pattern-Table.patt">
+                  <a-entity position="0 1 0">
+                        <a-gltf-model src="Book.glb"></a-gltf-model>
+                  </a-entity>
+            </a-marker>
 
-        <a-entity gltf-model="#book-model"></a-entity>
-    </a-scene>
+            <a-entity camera></a-entity>
+      </a-scene>
+          
 </body>
 
 </html>
